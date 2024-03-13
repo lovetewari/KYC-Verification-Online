@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>OTP in JS</title>
+	<link rel="stylesheet" href="emailotp.css">
+	<script src="https://smtpjs.com/v3/smtp.js"></script>
+</head>
+<body>
+	<div class="form">
+		<h1>e-KYC Verification</h1>
+		<input type="email" id="email" placeholder="Enter Email...">
+		<div class="otpverify">
+			<input type="text" id="otp_inp" placeholder="Enter the OTP sent to your Email...">
+			<button class="btn" id="otp-btn">Verify</button>
+			<button class="btn" id="otp-verified">Next</button>
+		</div>
+		<button class="btn" onclick="sendOTP()">Send OTP</button>
+	</div>
+	<script src="emailotp.js"></script>
+</body>
+</html>

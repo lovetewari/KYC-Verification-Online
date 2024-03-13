@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Know Your Customer Better</title>
+    <link rel="shortcut icon" href="/static/img/favicon.ico">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,700&display=swap" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="/static/vendor/mdbootstrap/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="/static/vendor/mdbootstrap/mdb.min.css" rel="stylesheet">
+    <!-- Custom styles -->
+    <link href="/static/ui/scss/bundle.min.css" rel="stylesheet">
+    <style>
+        /* Custom styles for verification status images */
+        #verification-status img {
+            max-width: 100px; /* Control the size of the images */
+            height: auto;
+        }
+        .verification-message {
+            font-size: 1.2rem;
+            margin-top: 1rem;
+        }
+        .powered img {
+            vertical-align: middle;
+        }
+        .powered div {
+            display: inline-block;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <!-- Content -->
+        <main class="container py-5">
+            <div class="text-center">
+                <h2 class="mb-4">Verification Result</h2>
+                <div id="verification-status">
+                    <!-- Verification status will be inserted here by JavaScript -->
+                </div>
+                <div class="mt-4">
+                    <a href="/" class="btn btn-primary" id="btn-done">Ok </a>
+                </div>
+            </div>
+        </main>
+        <!-- Footer -->
+        <footer class="text-center mt-4">
+            <div class="powered">
+                <img src="/static/img/faceonlive.png" width="42" alt="Logo" />&emsp;
+                <div>
+                    <span class="text-c-neutral">Prototype By</span><br />
+                    <a href="https://www.canva.com/design/DAF-wqCk_cY/momfCOMkSmdhEXOAne0l7w/edit">Team BinaryHex</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- JQuery -->
+    <script type="text/javascript" src="/static/vendor/mdbootstrap/jquery.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="/static/vendor/mdbootstrap/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="/static/vendor/mdbootstrap/mdb.min.js"></script>
+    <!-- Custom Script -->
+    <script type="text/javascript">
+        $(document).ready(function() {
+            // This variable should be dynamically set based on actual results from your backend
+            var recog_res = "{{ recog_res }}"; // Use server-side templating to set this variable
+
+            // Check if the face matching result is 'DIFFERENT'
+            if (recog_res === 'DIFFERENT') {
+                $('#verification-status').html(
+                    '<img src="/static/img/red-cross.gif" alt="Not Verified" />' +
+                    '<p class="text-danger verification-message">Details do not match with the documents.</p>'
+                );
+            } else {
+                $('#verification-status').html(
+                    '<img src="/static/img/green-tick.gif" alt="Verified" />' +
+                    '<p class="text-success verification-message">All your documents are verified.</p>'
+                );
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: #f7f7f7; /* Light grey background for the whole page */
+}
+.form {
+    width: 500px;
+    background-color: #ffffff; /* White background for the form */
+    padding: 40px 30px; /* Increased padding for better spacing */
+    display: grid;
+    gap: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adding a subtle shadow for depth */
+    border-radius: 8px; /* Rounded corners for the form */
+}
+input {
+    width: calc(100% - 20px); /* Adjust width to account for padding */
+    padding: 15px; /* Increased padding for better touch */
+    border: 1px solid #ccc; /* Subtle border for inputs */
+    border-radius: 4px; /* Slightly rounded corners for inputs */
+    font-size: 16px; /* Increased font size for better readability */
+}
+.otpverify {
+    display: none; /* Hide by default, as before */
+    justify-content: space-between; /* Space out the OTP input and button */
+    gap: 10px; /* Add gap between the buttons */
+}
+.btn {
+    padding: 15px 20px; /* Increased padding for a larger clickable area */
+    background-color: #4CAF50; /* A more vibrant green color */
+    color: white; /* White text for better contrast */
+    outline: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px; /* Match input text size */
+    transition: background-color 0.3s ease, transform 0.1s ease; /* Smooth background color transition on hover */
+}
+.btn:hover {
+    background-color: #45a049; /* Darken button color on hover for feedback */
+}
+.btn:active {
+    transform: translateY(2px); /* Slight push effect on click */
+}

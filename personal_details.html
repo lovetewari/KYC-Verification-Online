@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 20px;
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            min-height: 100vh; 
+        }
+        
+        .container {
+            background-color: white;
+            padding: 30px; 
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 500px; 
+            width: 100%; 
+        }
+        
+        h1 { 
+            text-align: center;
+            margin-bottom: 25px; 
+        }
+        
+        label {
+            font-weight: 600;
+            display: block;
+            margin-bottom: 5px;  
+        }
+        
+        input, select {
+            display: block;
+            width: 100%;
+            padding: 12px; 
+            margin-bottom: 15px; 
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box; 
+        }
+
+        input:focus, select:focus { 
+            border-color: #0095ff;  
+            box-shadow: 0 0 5px rgba(0, 149, 255, 0.4);  
+        }
+        
+        .btn-side {
+            display: block; 
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background 0.3s ease;
+            text-align: center;
+            margin-bottom: 10px; /* Added for spacing */
+        }
+        
+        .btn-side:hover {
+            background: #0056b3; 
+            transform: scale(1.03); 
+        }
+
+        .error { 
+            animation: shake 0.3s ease-in-out;
+        }
+
+        @keyframes shake {
+        10%, 90% { transform: translateX(-2px); }
+        30%, 50%, 70% { transform: translateX(2px); }
+        }
+
+        .success-message {
+        opacity: 0;  
+        animation: fadeIn 0.5s ease-in forwards; 
+        }
+
+        @keyframes fadeIn {
+        to { opacity: 1; }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+                padding: 15px;
+            }
+            label, input, select, .btn-side {
+                font-size: 14px;
+            }
+            .btn-side {
+                padding: 10px;
+            }``
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="{{ url_for('personal_details') }}" method="post" enctype="multipart/form-data" id="personalDetailsForm">
+            <h1>Personal Details</h1>
+
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+<label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+<label for="address">Address:</label>
+            <input type="text" id="address" name="address" required>
+
+            <label for="pan_aadhaar">PAN or Aadhaar Number:</label>
+            <input type="text" id="pan_aadhaar" name="pan_aadhaar" required>
+
+            <label for="income_range">Income Range:</label>
+            <select id="income_range" name="income_range" required>
+                <option value="0-1L">0-1 Lakhs</option>
+                <option value="1L-5L">1-5 Lakhs</option>
+                <option value="5L-10L">5-10 Lakhs</option>
+                <option value="10L+">10 Lakhs+</option>
+            </select>
+
+            <label for="employment_type">Type of Employment:</label>
+            <select id="employment_type" name="employment_type" required>
+                <option value="salaried">Salaried</option>
+                <option value="self-employed">Self-Employed</option>
+                <option value="unemployed">Unemployed</option>
+                <option value="student">Student</option>
+                <option value="retired">Retired</option>
+            </select>
+
+            <!-- Signature Upload -->
+            <label for="signature">Upload Signature:</label>
+            <input type="file" id="signature" name="signature" accept="image/*" required>
+
+            <!-- Next Button -->
+            <a href="/id_type/" class="btn-side">Next</a>
+        </form>
+    </div>
+
+    <script>
+        // Get form elements
+        const form = document.getElementById("personalDetailsForm");
+        const nameInput = document.getElementById("name");
+        const dobInput = document.getElementById("dob");
+        const addressInput = document.getElementById("address");
+        const panAadhaarInput = document.getElementById("pan_aadhaar");
+        const incomeRangeSelect = document.getElementById("income_range");
+        const employmentTypeSelect = document.getElementById("employment_type");
+        const signatureInput = document.getElementById("signature");
+        const nextButton = document.querySelector(".btn-side");
+
+        // Add event listener to form submission
+        form.addEventListener("submit", (event) => {
+            event.preventDefault();
+
+            // Validate form fields
+            if (
+                !nameInput.checkValidity() ||
+                !dobInput.checkValidity() ||
+                !addressInput.checkValidity() ||
+                !panAadhaarInput.checkValidity() ||
+                !incomeRangeSelect.checkValidity() ||
+                !employmentTypeSelect.checkValidity() ||
+                !signatureInput.checkValidity()
+            ) {
+                // If any field is invalid, show error messages
+                nameInput.reportValidity();
+                dobInput.reportValidity();
+                addressInput.reportValidity();
+                panAadhaarInput.reportValidity();
+                incomeRangeSelect.reportValidity();
+                employmentTypeSelect.reportValidity();
+                signatureInput.reportValidity();
+            } else {
+                // If all fields are valid, submit the form
+                form.submit();
+            }
+        });
+
+        // Add event listener to next button
+        nextButton.addEventListener("click", () => {
+            // Validate form fields
+            if (
+                !nameInput.checkValidity() ||
+                !dobInput.checkValidity() ||
+                !addressInput.checkValidity() ||
+                !panAadhaarInput.checkValidity() ||
+                !incomeRangeSelect.checkValidity() ||
+                !employmentTypeSelect.checkValidity() ||
+                !signatureInput.checkValidity()
+            ) {
+                // If any field is invalid, show error messages
+                nameInput.reportValidity();
+                dobInput.reportValidity();
+                addressInput.reportValidity();
+                panAadhaarInput.reportValidity();
+                incomeRangeSelect.reportValidity();
+                employmentTypeSelect.reportValidity();
+                signatureInput.reportValidity();
+            } else {
+                // If all fields are valid, proceed to the next page
+                window.location.href = "/id_type/";
+            }
+        });
+    </script>
+</body>
+</html>

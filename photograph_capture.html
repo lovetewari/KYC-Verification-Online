@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Photograph Capture</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label, input {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        input[type="submit"] {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background: #218838;
+        }
+    </style>
+</head>
+<body>
+    <form id="photoForm" action="/photograph_capture/" method="post" enctype="multipart/form-data">
+        <label for="live_photo">Live Photo:</label>
+        <input type="file" id="live_photo" name="live_photo" accept="image/*" capture="user" required>
+        <input type="submit" value="Submit">
+    </form>
+    <script>
+        document.getElementById('photoForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            var formData = new FormData(this);
+
+            fetch('/photograph_capture/', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                if(response.redirected) {
+                    window.location.href = response.url;
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        });
+    </script>
+</body>
+</html>
