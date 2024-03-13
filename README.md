@@ -64,5 +64,5 @@ Clearly communicate the reason if the verification fails, and guide users on how
 
 
 
-[Demo Video](https://github.com/lovetewari/KYC-Verification-Online/blob/main/Team%20BinaryHex%20Demo.mp4)
+[Demo Video](https://github.com/lovetewari/KYC-Verification-Online/blob/main/BinaryHexdemo.mp4)
 
