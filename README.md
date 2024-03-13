@@ -31,10 +31,8 @@ Biometric Verification (Optional):
 
 Implement biometric verification methods, such as fingerprint or facial recognition, for enhanced security.
 Biometrics add an extra layer of authentication and help prevent identity theft.
-API Integration:
+Integration:
 
-If using third-party services for document verification or liveness detection, integrate their APIs into your system.
-Choose reliable and compliant API providers to ensure accuracy and security.
 User Consent:
 
 Clearly communicate the e-KYC process to users, explaining why it's necessary and how their data will be handled.
