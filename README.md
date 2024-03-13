@@ -41,6 +41,9 @@ Clearly communicate the e-KYC process to users, explaining why it's necessary an
 Obtain explicit consent from users before initiating the verification process.
 
 
+[![Click to play video](https://img.youtube.com/vi/CQWRLCVk9Ag/0.jpg)](https://youtu.be/CQWRLCVk9Ag)
+
+
 
 [![Video Preview](preview_image.jpg)](BinaryHexdemo.mp4)
 
