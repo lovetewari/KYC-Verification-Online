@@ -45,7 +45,7 @@ Obtain explicit consent from users before initiating the verification process.
 
 
 
-[![Video Preview](preview_image.jpg)](BinaryHexdemo.mp4)
+
 
 
 
@@ -58,6 +58,10 @@ Continuous Monitoring:
 Implement ongoing monitoring of user accounts to detect any suspicious activities or changes in user behavior.
 Regularly update your e-KYC procedures to stay ahead of emerging threats.
 User Feedback:
+
+
+[![Video Preview](preview_scan.gif)](BinaryHexdemo.mp4)
+
 
 Provide feedback to users regarding the status of their verification process.
 Clearly communicate the reason if the verification fails, and guide users on how to rectify the issue.
