@@ -63,6 +63,7 @@ User Feedback:
 [![Video Preview](preview_scan.gif)](BinaryHexdemo.mp4)
 
 
+
 Provide feedback to users regarding the status of their verification process.
 Clearly communicate the reason if the verification fails, and guide users on how to rectify the issue.
 
