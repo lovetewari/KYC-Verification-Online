@@ -39,6 +39,9 @@ User Consent:
 
 Clearly communicate the e-KYC process to users, explaining why it's necessary and how their data will be handled.
 Obtain explicit consent from users before initiating the verification process.
+
+https://github.com/lovetewari/KYC-Verification-Online/blob/main/Team%20BinaryHex%20Demo.mp4
+
 Record Keeping:
 
 Maintain a secure and compliant record-keeping system for storing user identity verification data.
