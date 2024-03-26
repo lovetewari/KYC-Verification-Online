@@ -52,7 +52,7 @@
 - Cloud computing services such as AWS or GCP are utilized to host the containerized application, leveraging their infrastructure for reliability and scalability.
 - CI/CD pipelines are implemented for automated testing, building, and deployment of the application, ensuring rapid and reliable delivery of updates.
 
-  +-----------------+       +-------------------+       +-------------------------+
++-----------------+       +-------------------+       +-------------------------+
 |    Frontend     | <---> |     Backend       | <---> |       Machine Learning  |
 |    (HTML/CSS/JS)|       |  (Express.js)     |       |    (Transformers, OpenCV)|
 +-----------------+       +-------------------+       +-------------------------+
