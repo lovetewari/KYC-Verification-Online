@@ -36,14 +36,6 @@ Our platform aims to streamline and automate the Video KYC process, making it fa
 9. **User Consent:**
    - Clearly communicate the e-KYC process and obtain explicit consent from users.
 
-**Record Keeping:**
-- Maintain a secure record-keeping system for storing user identity verification data and follow data retention policies.
-
-**Continuous Monitoring:**
-- Implement ongoing monitoring of user accounts to detect suspicious activities and regularly update e-KYC procedures to stay ahead of emerging threats.
-
-**User Feedback:**
-- Provide feedback to users regarding the verification process status and guide them on rectifying issues if verification fails.
 
 ## Tech Stack:🧠
 - **Frontend Development:**
