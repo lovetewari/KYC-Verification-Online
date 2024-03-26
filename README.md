@@ -5,6 +5,17 @@ e-KYC verification electronically confirms user identities using trusted governm
 https://github.com/lovetewari/KYC-Verification-Online/assets/92184403/39bff6c1-b208-436f-9c37-ad17bc19e42d
 
 
+## Problem Statement 🛠️
+
+Currently, Know Your Customer (KYC) processes are predominantly offline or non-interactive online processes. These methods are often manual, cumbersome, and lack user engagement. They can be particularly challenging for users with limited financial resources or education levels. Additionally, existing processes may not be inclusive across languages and generations.
+
+We aim to address these challenges by creating an online interactive Video KYC process. This process should be intuitive, self-sufficient, and highly inclusive. It should capture the user's live photograph and basic details such as name, date of birth (DOB), address, PAN card/Aadhaar, signature, income range, and type of employment in a conversational manner. Our goal is to bridge the gap across languages and generations, ensuring accessibility for all users regardless of their financial status or educational background.
+
+
+## Solution 💪🏽
+
+Our platform aims to streamline and automate the Video KYC process, making it faster, more user-friendly, and compliant. We propose the following features:
+
 **Implementation Steps:**
 1. **User Registration:**
    - Users provide basic details like name, email, and phone number for registration.
@@ -34,7 +45,7 @@ https://github.com/lovetewari/KYC-Verification-Online/assets/92184403/39bff6c1-b
 **User Feedback:**
 - Provide feedback to users regarding the verification process status and guide them on rectifying issues if verification fails.
 
-**Tech Stack:**
+## Tech Stack:🧠
 - **Frontend Development:**
   - HTML, CSS, JavaScript (JS): Frontend development for user interface.
 - **Backend Development:**
