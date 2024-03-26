@@ -1,4 +1,4 @@
-**e-KYC Verification Process:**
+# e-KYC Verification Process:
 - e-KYC verification electronically confirms user identities using trusted government IDs for compliance and trust.
 
 
@@ -73,6 +73,17 @@ https://github.com/lovetewari/KYC-Verification-Online/assets/92184403/39bff6c1-b
                          |  Cloud Platform   |
                          |  (AWS/GCP)        |
                          +-------------------+
+
+
+# Workflow
+1) Language Selection
+2) Phone number Authentication
+3) Information Input
+4) Aadhar Card Verification
+5) Liveness Detection 
+6) Face Recognition
+7) Signature Validation
+8) Biometrics Validaton (Fingerprint or FaceID(Apple))
 
 
 **Future Scope:**
