@@ -5,8 +5,6 @@
 https://github.com/lovetewari/KYC-Verification-Online/assets/92184403/39bff6c1-b208-436f-9c37-ad17bc19e42d
 
 
-
-
 **Implementation Steps:**
 1. **User Registration:**
    - Users provide basic details like name, email, and phone number for registration.
@@ -83,3 +81,18 @@ https://github.com/lovetewari/KYC-Verification-Online/assets/92184403/39bff6c1-b
 - Adoption of Infrastructure as Code (IaC) principles using tools like Terraform or AWS CloudFormation for managing infrastructure configurations.
 - Implementation of auto-scaling policies based on resource utilization metrics for efficient resource allocation and cost management.
 - Incorporation of security measures such as encryption at rest and in transit, role-based access control (RBAC), and intrusion detection systems (IDS) for enhanced data protection and compliance.
+
+
+
+## Acknowledgements
+
+This project was developed as part of the Standard Chartered Hackathon.
+
+## Contributors
+
+- Love Tewari
+- Akash Thakur
+- Aryan Singh
+- Aditya Mishra
+- Anshuman Mishra
+- Vyshnavi Prabha
