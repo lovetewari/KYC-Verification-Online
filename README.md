@@ -2,6 +2,10 @@
 - e-KYC verification electronically confirms user identities using trusted government IDs for compliance and trust.
 
 
+https://github.com/lovetewari/KYC-Verification-Online/assets/92184403/39bff6c1-b208-436f-9c37-ad17bc19e42d
+
+
+
 
 **Implementation Steps:**
 1. **User Registration:**
