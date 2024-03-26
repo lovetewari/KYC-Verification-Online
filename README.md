@@ -52,26 +52,27 @@
 - Cloud computing services such as AWS or GCP are utilized to host the containerized application, leveraging their infrastructure for reliability and scalability.
 - CI/CD pipelines are implemented for automated testing, building, and deployment of the application, ensuring rapid and reliable delivery of updates.
 
-+-----------------+       +-------------------+       +-------------------------+
-|    Frontend     | <---> |     Backend       | <---> |       Machine Learning  |
-|    (HTML/CSS/JS)|       |  (Express.js)     |       |    (Transformers, OpenCV)|
-+-----------------+       +-------------------+       +-------------------------+
-        |                           |                              |
-        |                           |                              |
-        |                           |                              |
-        |                +-------------------+                    |
-        |                |   Containerized   |                    |
-        +--------------->|   Application     |<-------------------+
-                         |   (Docker/K8s)    |
+                         +-------------------+       +-------------------------+
+                         |    Frontend       | <---> |         Backend         |
+                         | (HTML/CSS/JS)     |       |     (Express.js)        |
+                         +-------------------+       +-------------------------+
+                                  |                           |
+                                  |                           |
+                                  |                           |
+                                  |                           |
+                         +-------------------+                |
+                         |  Containerized    |                |
+                         |    Application    |<---------------+
+                         |  (Docker/K8s)     |
                          +-------------------+
-                                    |
-                                    |
+                                  |
+                                  |
                          +-------------------+
-                         |   Cloud Platform  |
-                         |   (AWS/GCP)       |
+                         |  Cloud Platform   |
+                         |  (AWS/GCP)        |
                          +-------------------+
 
-  
+
 **Future Scope:**
 - Implementation of serverless computing using AWS Lambda or Google Cloud Functions for cost optimization and scalability.
 - Integration of monitoring and logging tools such as Prometheus and ELK stack for real-time performance monitoring and debugging.
